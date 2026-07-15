@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public string DbConn = "Host = localhost; Port = 5432; Username = postgres; Password = ; Database = shoe_cool";
+        public string DbConn = "Host = localhost; Port = 5432; Username = postgres; Password = Ltyecz2007; Database = shoe_cool";
         public Form1()
         {
             InitializeComponent();
@@ -77,6 +77,14 @@ namespace WindowsFormsApp1
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             textBox2.UseSystemPasswordChar = !checkBox1.Checked;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registration registration = new Registration();
+            registration.ShowDialog();
+            
         }
     }
 }

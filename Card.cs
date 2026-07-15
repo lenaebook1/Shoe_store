@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Card : UserControl
     {
-        public string DbConn = "Host = localhost; Port = 5432; Username = postgres; Password = ; Database = shoe_cool";
+        public string DbConn = "Host = localhost; Port = 5432; Username = postgres; Password = Ltyecz2007; Database = shoe_cool";
 
         public string Art;
         public string Foto;
