@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(557, 658);
             this.panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.button2.Location = new System.Drawing.Point(188, 524);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(197, 57);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Зарегестрироваться";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox1
             // 
@@ -133,17 +144,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button2.Location = new System.Drawing.Point(188, 524);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(197, 57);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Зарегестрироваться";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -154,6 +154,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ООО \"Обувь\"";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

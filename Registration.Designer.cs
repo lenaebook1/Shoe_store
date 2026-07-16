@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,8 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(557, 742);
             this.panel1.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(222, 529);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(124, 26);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Я не робот";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.button3.Location = new System.Drawing.Point(98, 431);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(197, 38);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Подтвердить пароль";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
@@ -163,27 +185,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Регистрация";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button3.Location = new System.Drawing.Point(98, 431);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 38);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Подтвердить пароль";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(222, 529);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(124, 26);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Я не робот";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -193,6 +194,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ООО \"Обувь\"";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

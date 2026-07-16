@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public string DbConn = "Host = localhost; Port = 5432; Username = postgres; Password = Ltyecz2007; Database = shoe_cool";
 
         public bool Confirm;
+        public bool Captcha;
 
         List<Control> controls = new List<Control>();
 
@@ -31,6 +32,7 @@ namespace WindowsFormsApp1
             });
         }
 
+        // метод для регистрации (регистрируются только гости)
         public void Reg()
         {
             using (NpgsqlConnection conn = new NpgsqlConnection(DbConn))
@@ -59,6 +61,7 @@ namespace WindowsFormsApp1
             }
         }
 
+        // если пароль подтвержден и если поля заполненв
         private void button2_Click(object sender, EventArgs e)
         {
             if (Confirm == true)
@@ -76,11 +79,20 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    controls.ForEach(c =>
+                    if (Captcha == true)
                     {
-                        c.BackColor = Color.White;
-                    });
-                    Reg();
+                        controls.ForEach(c =>
+                        {
+                            c.BackColor = Color.White;
+                        });
+                        Reg();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Капча не пройдена", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    
                 }
                    
             }
@@ -92,6 +104,7 @@ namespace WindowsFormsApp1
            
         }
 
+        // на форму войти
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -100,6 +113,7 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        // подтверждение пароля 
         private void button3_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == textBox3.Text)
@@ -116,6 +130,23 @@ namespace WindowsFormsApp1
                 return;
             }
                 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CaptchaForm captchaForm = new CaptchaForm();
+            DialogResult result = captchaForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Captcha = true;
+            }
+            else
+                Captcha = false;
+            
+            
+            
+                
+             
         }
     }
 }
